@@ -2656,7 +2656,16 @@
       }
 
       .social-bar {
-        display: none;
+        position: fixed;
+        left: 2px;
+        bottom: 0;
+        z-index: 50;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        opacity: 0;
+        animation: fadeIn 1s ease forwards 2.8s;
       }
 
       .stats-grid {
@@ -2748,7 +2757,7 @@
   <nav id="nav">
     <a href="#hero" style="text-decoration:none;">
       <div class="nav-logo">
-        <svg width="360" height="72" viewBox="0 0 360 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="360" height="72" viewBox="0 0 360 72" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;height:auto;">
           <!-- Antenna — single stem + orb -->
           <line x1="36" y1="10" x2="36" y2="4" stroke="#1ec896" stroke-width="1.8" stroke-linecap="round" />
           <circle cx="36" cy="3" r="4.2" fill="none" stroke="#1ec896" stroke-width="0.8" opacity="0.35" />
