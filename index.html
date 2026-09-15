@@ -2177,6 +2177,38 @@
       transform: translateY(-1px);
     }
 
+    /* Press card thumbnail */
+    .pub-thumb {
+      width: 120px;
+      height: 120px;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid var(--green-border);
+      flex-shrink: 0;
+      background: #050714;
+    }
+
+    .pub-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: grayscale(10%) contrast(0.95) brightness(0.95);
+      transition: filter .3s, transform .3s;
+    }
+
+    .pub-card:hover .pub-thumb img {
+      filter: grayscale(0%) contrast(1) brightness(1);
+      transform: scale(1.04);
+    }
+
+    @media(max-width:780px) {
+      .pub-thumb {
+        width: 100%;
+        height: 160px;
+      }
+    }
+
     /* ── AWARDS ──────────────────────────────────────────────── */
     #awards {}
 
@@ -3791,6 +3823,30 @@
         <a href="https://hackatom.energy/en/novosti/national-stage-russia/" target="_blank" class="btn btn-o">
           HackAtom National Stage — Results →
         </a>
+      </div>
+    </div>
+  </section>
+
+   <!-- Media & Press -->
+    <div class="edu-sec reveal" style="margin-top:60px;">
+      <div class="sub-lbl">// Media &amp; Press</div>
+      <div class="pub-card">
+        <div class="pub-thumb">
+          <img src="images/Press/ITMO-Interview.jpg" alt="ITMO News Interview" loading="lazy">
+        </div>
+        <div>
+          <div class="pub-title">Featured Interview: A Master's Student's Perspective on Robotics &amp; AI</div>
+          <div class="pub-journal">ITMO.NEWS · Student Feature · Saint Petersburg, Russia</div>
+          <div class="pub-citation">Sat down with ITMO News to share perspectives on the evolving fields of robotics and artificial intelligence, plus practical advice for prospective students from Pakistan considering ITMO.</div>
+          <a href="https://news.itmo.ru/en/education/students/news/14899/" target="_blank" class="pub-doi">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
+            </svg>
+            Read Full Interview
+          </a>
+        </div>
       </div>
     </div>
   </section>
